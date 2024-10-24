@@ -46,4 +46,11 @@ ansible-playbook playbook.yml
 ```
 ansible ALL=(ALL:ALL) NOPASSWD:ALL
 ```
+3. Установите сервер и клиент OpenSSH и запустить:
 
+```
+sudo apt update
+sudo apt install openssh-server openssh-client
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
