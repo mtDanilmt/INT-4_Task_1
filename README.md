@@ -8,8 +8,33 @@
 1. **Две виртуальные машины с Debian**
 2. **Запуск playbook Ansible происходит с Kali Linux**
 
+##Необходимые команды для запуска Ansible:
+
+
+Установим python3
+
+```
+sudo apt-get install python3
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+```
+
+Установка pip3 и ansible
+
+```
+sudo apt install python3-pip
+pip3 install ansible
+```
+
+Укажем в переменной PATH путь до ansible
+```
+export PATH=$PATH:/home/user/.local/bin
+```
+
+
 ## Команда для запуска playbook:
 
 ```bash
 ansible-playbook playbook.yml
 ```
+
+
