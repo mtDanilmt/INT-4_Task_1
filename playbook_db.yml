@@ -2,7 +2,7 @@
   vars_files:
     - ./vars.yml
   tasks:
-    - name: Update and upgrade APT packages
+    - name: Update and upgrade packages
       become: yes
       apt:
         update_cache: yes
@@ -35,7 +35,7 @@
         state: present
         update_cache: yes
 
-    - name: Удалить конфликтующий источник PostgreSQL, если он существует
+    - name: Delete the conflicting PostgreSQL source, if it exists
       become: yes
       file:
         path: /etc/apt/sources.list.d/pgdg.list
@@ -175,7 +175,7 @@
         path: /oracle/pg_data/archive/
         state: directory
 
-    - name: Установить права 777 на каталог /oracle/pg_data/archive/
+    - name: chmod 777 /oracle/pg_data/archive/
       become: yes
       file:
         path: /oracle/pg_data/archive/
@@ -222,7 +222,7 @@
         src: init.sql
       register: init
 
-    - name: initialization
+    - name: initialization DB
       become: yes
       become_user: postgres
       ignore_errors: yes
@@ -239,8 +239,7 @@
     - ./vars.yml
   tasks:
   
-    
-    - name: Install curl and ca-certificates\
+    - name: Install curl and ca-certificates
       become: yes
       apt:
         name:
@@ -279,7 +278,6 @@
         name: postgresql-16
         state: present
 
-
     - name: Restart PostgreSQL
       become: yes
       service:
@@ -300,7 +298,7 @@
         state: absent
         path: /var/lib/postgresql/data
 
-    - name: Replication
+    - name: RUN Replication
       become: yes
       become_user: postgres
       environment:
