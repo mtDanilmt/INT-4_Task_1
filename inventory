@@ -1,2 +1,2 @@
-db_host ansible_host=192.168.32.139 ansible_user=ansible ansible_password=123
-db_repl_host ansible_host=192.168.32.140 ansible_user=ansible ansible_password=123
+db_host ansible_host=192.168.32.139 ansible_user=ansible ansible_password=1234
+db_repl_host ansible_host=192.168.32.140 ansible_user=ansible ansible_password=1234
