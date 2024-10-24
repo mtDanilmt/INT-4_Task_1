@@ -38,4 +38,12 @@ export PATH=$PATH:/home/user/.local/bin
 ansible-playbook playbook.yml
 ```
 
+## Необходимые настройки Debian машин для запуска Ansible:
+
+1. Добавить нового пользователя "ansible". (Имя пользователя можно поменять, главное указать его затем в inventory)
+2. Добавить строку в /etc/sudoers:
+
+```
+ansible ALL=(ALL:ALL) NOPASSWD:ALL
+```
 
