@@ -31,6 +31,12 @@ pip3 install ansible
 export PATH=$PATH:/home/user/.local/bin
 ```
 
+Ввести команду: 
+
+```
+sudo apt-get install sshpass
+```
+
 
 ## Команда для запуска playbook:
 
