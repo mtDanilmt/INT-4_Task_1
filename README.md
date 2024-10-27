@@ -95,3 +95,30 @@ sudo systemctl start ssh
     
    5.1 Запускаемый playbook.
 
+
+
+## Траблшутинг:
+
+Если у вас не устанавливается ansible нужно создать вирутальное окружение, для этого в корне нужно прописать: 
+
+```
+apt install python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Затем ввести ещё раз командку установки ansible:
+
+```
+pip3 install ansible 
+```
+
+
+
+
+
+
+
+
+
+
