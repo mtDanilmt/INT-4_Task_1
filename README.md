@@ -1,7 +1,7 @@
 # INT-4_Task_1
 Для первого задания INT-4(Ansible)
 
-Всем машимам стоит установить статический ip адрес. 
+Всем машинам стоит установить статический IP-адрес. 
 
 ## Окружение
 
@@ -15,6 +15,7 @@
 Установим python3
 
 ```
+sudo apt update
 sudo apt-get install python3
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
 ```
